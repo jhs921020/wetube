@@ -19,8 +19,6 @@ app.use(
   })
 );
 
-console.log(process.env.COOKIE_SECRET);
-
 app.use(
   session({
     secret: process.env.COOKIE_SECRET,
