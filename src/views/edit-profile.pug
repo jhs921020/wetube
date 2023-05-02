@@ -1,10 +1,16 @@
 extends base
 
 block content
-    form(method="POST")
+    form(method="POST", enctype="multipart/form-data")
+        label(for="avatar") Avatar
+        input(type="file", id="avatar", name="avatar", accept="image/*")
+        label Name
         input(name="name", type="text", placeholder="Name", required, value=loggedInUser.name)
+        label Email
         input(name="email", type="email", placeholder="Email", required, value=loggedInUser.email)
+        label Username
         input(name="username", type="text", placeholder="Username", required, value=loggedInUser.username)
+        label Location
         input(name="location", type="text", placeholder="Location", required, value=loggedInUser.location)
         input(type="submit", value="Update Profile")
         if !loggedInUser.socialOnly
