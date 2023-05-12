@@ -260,6 +260,13 @@ input[type=submit],
   display: block;
 }
 
+input[type=range] {
+  all: unset;
+  border-radius: 10px;
+  background-color: #fff;
+  height: 5px;
+}
+
 .social-login {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   padding-top: 30px;
