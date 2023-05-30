@@ -253,11 +253,21 @@ input[type=submit],
 .social__btn {
   border-radius: 5px;
   padding: 12px 20px;
-  background-color: white;
-  color: #cc0d00;
-  text-align: center;
+  background-color: white !important;
+  color: #cc0d00 !important;
+  text-align: center !important;
   cursor: pointer;
   display: block;
+  border: none;
+}
+input[type=submit]:focus,
+.social__btn:focus {
+  outline: none;
+}
+input[type=submit]:disabled,
+.social__btn:disabled {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 input[type=range] {
@@ -385,6 +395,20 @@ form label {
 }
 .edit-profile__password a {
   text-decoration: underline;
+}
+
+.upload__container {
+  width: 100%;
+}
+.upload__container .upload__video {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.upload__container .upload__video video {
+  max-width: 100%;
+  margin-bottom: 10px;
 }
 
 a {
